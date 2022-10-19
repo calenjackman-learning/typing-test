@@ -15,8 +15,12 @@ def start_screen(stdscr):
 
 
 def display_text(stdscr, target, current, wpm=0):
+    rows, cols = stdscr.getmaxyx()
     stdscr.addstr(target)
-    stdscr.addstr(1, 0, "WPM: {wpm_display}".format(wpm_display=wpm))
+    stdscr.addstr(
+        rows - 1,
+        cols - 1,
+        "WPM: {wpm_display}".format(wpm_display=wpm))
 
     for i, char in enumerate(current):
         character_correct = target[i] == current[i]
