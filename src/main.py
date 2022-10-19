@@ -31,7 +31,7 @@ def load_text(file_path):
 
 
 def wpm_test(stdscr):
-    target_text = load_text("../samples.txt")
+    target_text = load_text("../opt/samples.txt")
     current_text = []
     wpm = 0
     start_time = time.time()
